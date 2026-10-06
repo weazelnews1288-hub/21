@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ЗАГОЛОВОК ВКЛАДКИ БРАУЗЕРА: поменяйте текст ниже -->
+  <title>Главная</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📰%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта (логотип и меню). Подставляется автоматически из js/config.js.
+       ЭТУ СТРОКУ НЕ УДАЛЯЙТЕ. Название и меню меняются в js/config.js -->
+  <div id="site-header"></div>
+
+  <main class="container">
+
+    <!-- Слоган под шапкой. Текст берётся из js/config.js (поле slogan) -->
+    <section class="intro">
+      <h1 id="site-slogan"></h1>
+    </section>
+
+    <!-- Поиск и кнопки категорий. Категории создаются автоматически
+         из поля category в js/articles.js — ничего добавлять сюда не нужно -->
+    <div class="toolbar">
+      <input type="search" id="search" placeholder="Поиск по новостям…" aria-label="Поиск">
+      <div id="category-filter" class="filters"></div>
+    </div>
+
+    <!-- Сюда скрипт выводит карточки новостей из js/articles.js -->
+    <div id="news-list" class="grid"></div>
+    <p id="empty" class="empty" hidden>Ничего не найдено.</p>
+
+  </main>
+
+  <!-- Подвал сайта. Текст берётся из js/config.js (поле footer) -->
+  <div id="site-footer"></div>
+
+  <!-- Порядок подключения важен, не меняйте его -->
+  <script src="js/config.js"></script>
+  <script src="js/articles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
